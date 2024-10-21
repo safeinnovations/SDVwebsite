@@ -113,34 +113,114 @@ hr {
   opacity: 0.25;
 }
 
+/* General Styles for Heading Tags */
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
   font-family: "Merriweather Timesnewroman", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 500;
   line-height: 1.2;
 }
 
+/* Responsive Font Sizes for h1 */
 h1, .h1 {
-  font-size: calc(1.375rem + 1.5vw);
+  font-size: calc(1.375rem + 1.5vw); /* Fluid sizing for small screens */
 }
 @media (min-width: 1200px) {
   h1, .h1 {
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* Fixed size for large screens */
   }
 }
 
-h2, .h2 {
-  font-size: calc(1.325rem + 0.9vw);
-}
-@media (min-width: 1200px) {
-  h2, .h2 {
-    font-size: 2rem;
-  }
+/* Out Reach Section adjustments */
+#out-reach-section {
+    background-color: #ffffff;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-family: "Merriweather Timesnewroman", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; /* Ensure font consistency */
 }
 
+/* Adjust heading alignment, font style, and background */
+.out-reach-heading {
+    background-color: #ffffff;
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+    font-size: calc(1.325rem + 0.9vw); /* Responsive font sizing based on viewport */
+    font-family: "Merriweather Timesnewroman", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; /* Same font as other headings */
+    font-weight: 500; /* Ensure weight consistency */
+    line-height: 1.2; /* Line-height consistency for better readability */
+    color: #333333; /* Consistent color for headings */
+}
+
+/* Text below the images */
+.portfolio-box-caption {
+    text-align: center;
+    background-color: #ffffff;
+    color: black;
+    padding: 0.75rem 1rem;
+    font-family: "Merriweather Timesnewroman", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; /* Ensure caption uses same font */
+    font-size: 1rem; /* Ensure consistent text size */
+    line-height: 1.5; /* Ensure the same line-height for captions */
+}
+
+.portfolio-box-caption a {
+    color: #e63946;
+    text-decoration: underline;
+    font-family: inherit; /* Ensure links inherit the same font */
+}
+
+.portfolio-box-caption a:hover {
+    color: #f1faee;
+}
+}
+
+.scroll-container {
+    position: relative;
+    overflow: hidden; /* Hide overflow */
+}
+
+.row.g-0 {
+    display: flex; /* Use flexbox for horizontal layout */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    width: 100%; /* Ensure full width */
+}
+
+.scroll-left, .scroll-right {
+    background-color: white; /* Background for buttons */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer on hover */
+    padding: 10px; /* Padding for buttons */
+    font-size: 24px; /* Icon size */
+    position: absolute; /* Position the buttons */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust vertical alignment */
+    z-index: 1; /* Ensure buttons are on top */
+}
+
+.scroll-left {
+    left: 10px; /* Position left button */
+}
+
+.scroll-right {
+    right: 10px; /* Position right button */
+}
+
+/* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+#portfolio-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for Firefox */
+#portfolio-scroll {
+    scrollbar-width: none; /* Firefox */
+}
+
+/* Optional: Add more media queries for h3 to h6 if needed */
+/* Example for h3 */
 h3, .h3 {
-  font-size: calc(1.3rem + 0.6vw);
+  font-size: calc(1.2rem + 0.8vw);
 }
 @media (min-width: 1200px) {
   h3, .h3 {
@@ -148,8 +228,9 @@ h3, .h3 {
   }
 }
 
+/* Example for h4 */
 h4, .h4 {
-  font-size: calc(1.275rem + 0.3vw);
+  font-size: calc(1rem + 0.7vw);
 }
 @media (min-width: 1200px) {
   h4, .h4 {
@@ -157,17 +238,29 @@ h4, .h4 {
   }
 }
 
+/* Example for h5 */
 h5, .h5 {
-  font-size: 1.25rem;
+  font-size: calc(0.9rem + 0.5vw);
+}
+@media (min-width: 1200px) {
+  h5, .h5 {
+    font-size: 1.25rem;
+  }
 }
 
+/* Example for h6 */
 h6, .h6 {
-  font-size: 1rem;
+  font-size: calc(0.8rem + 0.4vw);
+}
+@media (min-width: 1200px) {
+  h6, .h6 {
+    font-size: 1rem;
+  }
 }
 
 p {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 abbr[title] {
@@ -3437,7 +3530,7 @@ textarea.form-control-lg {
 }
 
 .dropdown-divider {
-  height: 0;
+  height: 2;
   margin: var(--bs-dropdown-divider-margin-y) 0;
   overflow: hidden;
   border-top: 1px solid var(--bs-dropdown-divider-bg);
@@ -3631,11 +3724,13 @@ textarea.form-control-lg {
 }
 @media (prefers-reduced-motion: reduce) {
   .nav-link {
-    transition: none;
+    transition: background-color 0.3s, color 0.3s;
   }
 }
 .nav-link:hover, .nav-link:focus {
-  color: var(--bs-nav-link-hover-color);
+    background-color: black; /* White background on hover */
+    color: #2490a7; /* Change text color to match your theme */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
 .nav-link.disabled {
   color: var(--bs-nav-link-disabled-color);
@@ -3747,7 +3842,7 @@ textarea.form-control-lg {
   --bs-navbar-toggler-border-color: rgba(0, 0, 0, 0.1);
   --bs-navbar-toggler-border-radius: 0.375rem;
   --bs-navbar-toggler-focus-width: 0.25rem;
-  --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
+  --bs-navbar-toggler-transition: box-shadow 0.3s ease-in-out;
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -3903,6 +3998,15 @@ textarea.form-control-lg {
     flex-grow: 0;
     padding: 0;
     overflow-y: visible;
+  }
+  .navbar-nav .nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 10px 15px; /* Add consistent padding */
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 }
 @media (min-width: 768px) {
@@ -4140,9 +4244,9 @@ textarea.form-control-lg {
 }
 
 .navbar-dark {
-  --bs-navbar-color: rgba(255, 255, 255, 0.55);
-  --bs-navbar-hover-color: rgba(255, 255, 255, 0.75);
-  --bs-navbar-disabled-color: rgba(255, 255, 255, 0.25);
+  --bs-navbar-color: rgba(37, 255, 255, 0.55);
+  --bs-navbar-hover-color: rgba(37, 255, 255, 0.75);
+  --bs-navbar-disabled-color: rgba(37, 255, 255, 0.25);
   --bs-navbar-active-color: #fff;
   --bs-navbar-brand-color: #fff;
   --bs-navbar-brand-hover-color: #fff;
@@ -5022,17 +5126,17 @@ textarea.form-control-lg {
 }
 
 .list-group-item-primary {
-  color: #923b23;
+  color: #2490a7;
   background-color: #fde0d8;
 }
 .list-group-item-primary.list-group-item-action:hover, .list-group-item-primary.list-group-item-action:focus {
-  color: #923b23;
-  background-color: #e4cac2;
+  color: #2490a7;
+  background-color: #ffffff;
 }
 .list-group-item-primary.list-group-item-action.active {
   color: #fff;
-  background-color: #923b23;
-  border-color: #923b23;
+  background-color: #2490a7;
+  border-color: #2490a7;
 }
 
 .list-group-item-secondary {
@@ -10837,7 +10941,7 @@ body {
 }
 
 .page-section {
-  padding: 8rem 0;
+  padding: 4rem 0 4rem 0; /* 4rem for top padding, 8rem for bottom padding */
 }
 
 .text-white-75 {
@@ -10854,9 +10958,9 @@ body {
 }
 
 hr.divider {
-  height: 0.2rem;
-  max-width: 3.25rem;
-  margin: 1.5rem auto;
+  height: 0.25rem;
+  max-width: 6rem;
+  margin: 1.25rem auto;
   background-color: #2490a7;
   opacity: 1;
 }
@@ -10886,7 +10990,9 @@ hr.divider-light {
   color: #2490a7;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active {
-  color: #2490a7 !important;
+    background-color: white; /* Highlight the active menu item */
+    color: #2490a7; /* Match the text color */
+    border-radius: 0.25rem; /* Slight rounded corners */
 }
 @media (min-width: 992px) {
   #mainNav {
@@ -10930,7 +11036,7 @@ hr.divider-light {
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
-  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("assets/img/bg-masthead.jpg");
+  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("assets\Media1.mp4");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -10939,6 +11045,38 @@ header.masthead {
 header.masthead h1, header.masthead .h1 {
   font-size: 2.25rem;
 }
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Ensure video stays behind the content */
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the whole background */
+}
+
+.masthead {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.masthead .container {
+  position: relative;
+  z-index: 1; /* Puts the content in front of the video */
+}
+
 @media (min-width: 992px) {
   header.masthead {
     height: 100vh;
