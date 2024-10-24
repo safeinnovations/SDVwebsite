@@ -11132,3 +11132,16 @@ header.masthead h1, header.masthead .h1 {
 #portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption, #portfolio .container-sm .portfolio-box:hover .portfolio-box-caption, #portfolio .container-md .portfolio-box:hover .portfolio-box-caption, #portfolio .container-lg .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xl .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xxl .portfolio-box:hover .portfolio-box-caption {
   opacity: 1;
 }
+#contact strong {
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text for contrast */
+    padding: 2px 4px; /* Padding around the text to give it some space */
+    border-radius: 3px; /* Optional: to round the corners slightly */
+    display: inline-block; /* Ensures the background only wraps around the text */
+}#contact strong, #contact h2 {
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text for contrast */
+    padding: 2px 4px; /* Padding around the text */
+    border-radius: 3px; /* Slightly rounded corners */
+    display: inline-block; /* Ensures background wraps only the text */
+}
